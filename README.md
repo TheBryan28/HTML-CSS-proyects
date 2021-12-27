@@ -7,4 +7,4 @@ My first website, about me-->  https://primerawebryan.netlify.app/
 
 Coffee Blog--> https://blogcafetolima.netlify.app
 
-website extracted from wordpress--> https://wordpress-bryan.netlify.app/
+Web made in wordpress--> https://wordpress-bryan.netlify.app/
