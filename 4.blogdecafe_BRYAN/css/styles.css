@@ -1,0 +1,240 @@
+:root{
+    --fuenteheading: 'PT Sans', sans-serif;
+    --fuenteparrafos:'Open Sans', sans-serif;
+    --primario: #784d3c;
+    --blanco: #FFFF;
+    --negro: rgb(0, 0, 0);
+}
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;/*Aqui se ayuda a que las cajas mantengan el tamaño que le damos con width y height,
+     border-box e inherit para incluirlo en todo el html sin problemas*/
+}
+body{
+    font-family: var(--fuenteparrafos);
+    font-size: 1.6rem;
+    line-height: 2;/*Interlineado*/
+}
+.contenedor{
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+}
+h1,h2,h3,h4{
+    font-family: var(--fuenteheading);
+}
+
+h1{
+    font-size: 4.8rem;
+}
+h2{
+    font-size: 4rem;
+}
+h3{
+    font-size: 3.2rem;
+}
+h4{
+    font-size: 2.8rem;
+}
+img{
+    max-width: 100%;
+}
+
+/*UTILIDADES*/
+.no-margin{
+    margin: 0;
+}
+.no-padding{
+    padding: 0;
+}
+.centrar-texto{
+    text-align: center;
+}
+.bold{
+    font-weight: bold;
+}
+.no-bold{
+    font-weight: normal;
+}
+.fuenteh{
+    font-family: var(--fuenteheading);
+}
+a:link, a:visited, a:active {
+    text-decoration:none;
+}
+/*Header*/
+.webp .header{
+    background-image: url(../img/banner.webp);
+}
+.no-webp .header{
+    background-image: url(../img/banner.jpg);
+}
+.header {
+    height: 60rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.header__texto{
+    color: white;
+    margin-top: 5rem;
+    padding: 0 2rem;
+}
+.logo__nombre{
+    font-family: var(--fuenteheading);
+    font-weight: normal;
+    color: white;
+}
+
+@media (min-width: 768px) {
+    .barra{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20rem;
+    }   
+    .navegacion{
+        display: flex;
+        gap: 2rem;
+    } 
+    .contenedorprincipal{
+        display: grid;
+        grid-template-areas: "blog side";
+        grid-template-columns: 67% 37%;
+        gap: 5rem;
+    }
+}
+.navegacion__enlace{
+    display: block;
+    text-align: center;
+    font-size: 1.8rem;
+    color: white;
+}
+/*BLOG*/
+
+.entrada{
+    border-bottom: 1px solid rgb(199, 188, 188);
+    margin-bottom: 2rem;
+}
+.entrada:last-of-type{
+    border-bottom: none;
+    margin-bottom: 0rem;
+}
+.entrada__imagen{
+    height: 100%;
+    width: 100%;
+}
+.boton{
+    display: block;
+    font-family: var(--fuenteheading);
+    color: white;
+    text-align: center;
+    padding: 1rem 3rem;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    margin-bottom: 2rem;
+}
+.boton:hover{
+    cursor: pointer;
+}
+.botonprimario{
+    background-color: var(--negro);
+}
+.botonsecundario{
+    background-color: var(--primario);
+}
+@media (min-width: 768px) {
+    .boton{
+        width:fit-content;
+    }
+}
+.sidebar__curso{
+    border-bottom: 1px solid rgb(202, 198, 198);
+}
+.sidebar__curso:last-of-type{
+    border-bottom: none;
+}
+.footer{
+    background-color: black;
+}
+@media (min-width: 768px) {
+    .footer_contenido{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+.nosotros__contenido{
+    text-align: center;
+}
+.nosotros__imagen{
+    width: 100%;
+}
+.nosotros__texto {
+    text-align: justify;
+}
+@media (min-width: 768px) {
+    .nosotros__contenido{
+        display:grid;
+        grid-template-columns: 50% 50%;
+        flex-basis: 50%;
+        gap: 3rem;
+        align-items: center;
+        margin-bottom: 4rem;
+    }
+}
+.curso{
+    padding: 2rem 0;
+}
+@media (min-width: 768px) {
+    .curso{
+        display: grid;
+        grid-template-columns: 30% 70%;
+        gap: 3rem;
+    }
+}
+.contacto__imagen{
+    z-index: 1;
+}
+.formulario{
+    margin: -5rem auto 0 auto;
+    position: relative;
+    background-color: white;
+    z-index: 2;
+    padding: 3rem;
+}
+.formulario fieldset{
+    border:none;
+}
+.contencion{
+    padding: 0 5%;
+
+}
+.campo{
+    display: flex;
+    margin-bottom: 2rem;
+    column-gap: 2rem;
+}
+.campo label{
+    flex-basis: 9rem;
+    text-align: right;
+}
+.contenedor-campos input, .contenedor-campos textarea {
+    width: 100%;
+}
+.contenedor-campos textarea {
+    height: 15rem;
+}
+@media (max-width: 768px) {
+    .enviar{
+        width: 100%;
+    }
+    
+}
